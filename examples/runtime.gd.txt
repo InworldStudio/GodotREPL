@@ -1,0 +1,5 @@
+var probe = ctx.tree.root.get_node("Laboratory/Probe")
+probe.position = Vector3(3, 2, 1)
+if not await ctx.frames(2):
+    return "cancelled"
+return probe.position

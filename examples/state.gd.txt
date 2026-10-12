@@ -1,0 +1,3 @@
+ctx.state["visits"] = ctx.state.get("visits", 0) + 1
+print("visit ", ctx.state["visits"])
+return ctx.state["visits"]

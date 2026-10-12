@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3]
+
+[sub_resource type="StandardMaterial3D" id="CubeMaterial"]
+albedo_color = Color(0.2, 0.7, 0.6, 1)
+roughness = 0.35
+
+[sub_resource type="BoxMesh" id="CubeMesh"]
+material = SubResource("CubeMaterial")
+
+[sub_resource type="StandardMaterial3D" id="GroundMaterial"]
+albedo_color = Color(0.13, 0.16, 0.2, 1)
+
+[sub_resource type="PlaneMesh" id="GroundMesh"]
+material = SubResource("GroundMaterial")
+size = Vector2(12, 12)
+
+[node name="Laboratory" type="Node3D"]
+
+[node name="Probe" type="Node3D" parent="."]
+position = Vector3(0, 0.5, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="Probe"]
+mesh = SubResource("CubeMesh")
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+mesh = SubResource("GroundMesh")
+
+[node name="Camera" type="Camera3D" parent="."]
+position = Vector3(6, 5, 8)
+rotation_degrees = Vector3(-27, 37, 0)
+current = true
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-45, -30, 0)
+light_energy = 1.8
+shadow_enabled = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="UI"]
+offset_left = 24.0
+offset_top = 20.0
+theme_override_font_sizes/font_size = 26
+text = "Godot REPL Laboratory"
+
+[node name="Hint" type="Label" parent="UI"]
+offset_left = 24.0
+offset_top = 60.0
+text = "Probe is a live scene object. Move it through the REPL."

@@ -1,0 +1,8 @@
+var root = ctx.editor.get_edited_scene_root()
+if root == null:
+    return "Open a scene first"
+var node = Node3D.new()
+node.name = "ReplCreated"
+root.add_child(node)
+node.owner = root
+return node.name

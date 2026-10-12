@@ -1,0 +1,9 @@
+@tool
+extends RefCounted
+
+func run(ctx):
+    ctx.state["helper"] = self
+    return twice(3)
+
+func twice(value):
+    return value * 2

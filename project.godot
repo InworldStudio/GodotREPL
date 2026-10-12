@@ -1,0 +1,10 @@
+config_version=5
+[application]
+config/name="Godot REPL Laboratory"
+run/main_scene="res://examples/lab.tscn"
+[autoload]
+GodotReplRuntime="*res://addons/godot_repl/runtime.gd"
+[editor_plugins]
+enabled=PackedStringArray("res://addons/godot_repl/plugin.cfg")
+[rendering]
+renderer/rendering_method="gl_compatibility"
