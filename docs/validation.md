@@ -68,6 +68,6 @@ python3 tests/native_extension.py --godot /absolute/path/to/Godot
 
 ## 交付与归属
 
-独立本地仓库 `GodotREPL`，分支 `codex/godot-repl-v1`，空仓库无基线提交、无远端。源码、文档与证据保留在本任务目录；验证后仅暂存，未 commit、push、合并或发布。目录含唯一成果，不能回收。
+2026-10-14：源码、文档、示例与测试已提交并上传至组织私有仓库 [InworldStudio/GodotREPL](https://github.com/InworldStudio/GodotREPL)，默认分支为 `main`。本地开发分支 `codex/godot-repl-v1` 保留。引擎缓存、测试临时工程、下载模板与本机验证证据按 `.gitignore` 留在本地，不进入源码仓库；验证记录中的 `.scratch/` 路径仅在原测试机器可用。本次上传未重新执行上述运行测试。
 
 山海消费侧由 [Issue #11](https://github.com/InworldStudio/Shanhai/issues/11) 跟踪。没有修改山海或 AGW 的原型、源码与工作区。
